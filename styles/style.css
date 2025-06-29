@@ -1,14 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-size: 18px;
   min-width: 375px;
+  font-family: "IBM Plex mono";
+  font-size: 18px;
   background-image: var(--background-image);
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'IBM Plex mono';
+  background-attachment: fixed;
 }
 
 header {
@@ -22,25 +22,25 @@ header {
 }
 
 .header-tittle {
+  padding-top: 10px;
+  padding-left: 10px;
+  color: var(--accent-color-title);
   font-weight: 700;
   font-size: 116px;
   line-height: 83%;
-  padding-left: 10px;
-  padding-top: 10px;
-  color: var(--accent-color-title);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header-text {
   width: 355px;
   height: 117px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: var(--text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  margin-left: 10px;
-  margin-bottom: 10px;
   background-color: var(--accent-color);
-  color: var(--text-color);
 }
 
 .decorated-zone {
@@ -50,85 +50,85 @@ header {
 .rec-tittle {
   display: flex;
   justify-content: flex-end;
-  padding-right: 38px;
   padding-top: 10px;
+  padding-right: 38px;
   color: var(--accent-color-header-rec);
 }
 
 .rec-tittle::after {
-  display: flex;
   content: "";
+  position: absolute;
   top: 18px;
   right: 18px;
-  position: absolute;
+  display: flex;
   display: inline-block;
   width: 9px;
   height: 9px;
-  background-color: var(--accent-color-header-rec);
   border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px var(--accent-color-header-rec);
   vertical-align: middle;
+  box-shadow: 0px 0px 4px 2px var(--accent-color-header-rec);
+  background-color: var(--accent-color-header-rec);
 }
 
 .decorated-zone::before {
   content: "";
   position: absolute;
+  top: 10px;
+  right: 10px;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
-  top: 10px;
-  right: 10px;
 }
 
 .decorated-zone::after {
   content: "";
   position: absolute;
+  bottom: 10px;
+  left: 10px;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
-  bottom: 10px;
-  left: 10px;
 }
 
 .header__theme-menu-list {
   display: flex;
-  padding-right: 10px;
   flex-direction: column;
   align-items: flex-end;
   row-gap: 11.5px;
+  padding-right: 10px;
 }
 
 .header__theme-menu {
-  height: 137px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  height: 137px;
   color: var(--accent-color);
 }
 
 .header__theme-menu-button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 70px;
   height: 26px;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color-header);
-} 
+}
 
 .container {
   background-color: var(--background-color);
 }
 
 .container-section {
-  padding-left: 10px;
   padding-right: 10px;
+  padding-left: 10px;
 }
 
 .title-decor {
@@ -137,9 +137,9 @@ header {
 }
 
 .header__theme-menu-button:focus {
-  outline: none;
-  border-bottom: 1px var(--accent-color-header) solid;
   border-width: 1px;
+  border-bottom: 1px var(--accent-color-header) solid;
+  outline: none;
 }
 
 .header__theme-menu-button:hover {
@@ -148,14 +148,14 @@ header {
 }
 
 .title-decor:hover {
-  border-bottom: 1px var(--accent-color-header) solid;
   border-width: 1px;
+  border-bottom: 1px var(--accent-color-header) solid;
 }
 
 .title-decor:focus {
-  outline: none;
   border: 1px var(--accent-color-header) solid;
   border-width: 1px;
+  outline: none;
 }
 
 .container-section-about-focused {
@@ -163,17 +163,17 @@ header {
 }
 
 .little-tittle {
-  background-color: var(--accent-color);
+  margin-bottom: 10px;
   color: var(--text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  margin-bottom: 10px;
-} 
+  background-color: var(--accent-color);
+}
 
 .container-section-text {
-  color: var(--text-color-content);
   padding-bottom: 20px;
+  color: var(--text-color-content);
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
@@ -184,8 +184,8 @@ header {
 }
 
 .average-tittle {
-  color: var(--text-color-subtitle);
   margin-bottom: 20px;
+  color: var(--text-color-subtitle);
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -200,18 +200,18 @@ header {
 }
 
 .container-section-img {
-  row-gap: 10px;
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
 }
 
 .little-tittle-img {
-  background-color: var(--accent-color);
+  margin-bottom: 10px;
   color: var(--text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  margin-bottom: 10px;
+  background-color: var(--accent-color);
 }
 
 .img-sunset {
@@ -245,39 +245,39 @@ footer {
 }
 
 .footer-tittle {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   height: 668px;
+  padding-top: 20px;
+  padding-left: 15px;
+  color: var(--accent-color-title);
   font-weight: 700;
   font-size: 116px;
   line-height: 83%;
-  color: var(--accent-color-title);
   text-shadow: 2px 2px 0 var(--accent-color);
-  padding-left: 15px;
-  padding-top: 20px;
 }
 
 .footer-tittle::before {
   content: "";
   position: absolute;
+  top: 20px;
+  right: 10px;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
-  top: 20px;
-  right: 10px;
 }
 
 .footer-tittle::after {
   content: "";
   position: absolute;
+  bottom: 2px;
+  left: 10px;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
-  bottom: 2px;
-  left: 10px;
 }
 
 @media (min-width: 768px) {
@@ -303,7 +303,7 @@ footer {
   .header-text {
     width: 364px;
   }
-  
+
   .header__theme-menu {
     height: 244px;
   }
@@ -354,8 +354,8 @@ footer {
   }
 
   .container-section {
-    padding-left: 20px;
     padding-right: 20px;
+    padding-left: 20px;
   }
 
   .average-tittle-width {
@@ -424,8 +424,8 @@ footer {
     display: flex;
     justify-content: center;
     height: 1024px;
-    font-size: 120px;
     margin-right: 20px;
+    font-size: 120px;
   }
 
   .footer-tittle::before {
@@ -441,18 +441,18 @@ footer {
 
 @media (min-width: 1024px) {
   .header {
-    height: 768px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 46px 403px auto;
+    height: 768px;
   }
 
   .header__theme-menu {
-    grid-row: 1;
-    grid-column: 1/4;
     display: grid;
-    align-items: start;
+    grid-column: 1/4;
+    grid-row: 1;
     justify-content: center;
+    align-items: start;
     margin-top: 20px;
     padding-left: 20px;
   }
@@ -465,17 +465,17 @@ footer {
 
   .header-tittle {
     display: flex;
-    align-items: flex-end;
-    grid-row: 2;
     grid-column: 1/3;
+    grid-row: 2;
+    align-items: flex-end;
     font-size: 157px;
   }
 
   .header-box {
     display: flex;
-    align-items: center;
-    grid-row: 3;
     grid-column: 1/4;
+    grid-row: 3;
+    align-items: center;
     margin-bottom: 10px;
   }
 
@@ -485,15 +485,15 @@ footer {
   }
 
   .rec-tittle {
-    grid-row: 1;
     grid-column: 3;
+    grid-row: 1;
   }
 
   .container-section-about-focused {
-    height: 588px;
     display: grid;
     grid-template-columns: 335px auto;
     grid-template-rows: 264px 264px;
+    height: 588px;
   }
 
   .container-section-about-сoncentration {
@@ -503,9 +503,9 @@ footer {
   }
 
   .average-tittle-width {
-    width: 315px;
-    grid-row: 1;
     grid-column: 1/4;
+    grid-row: 1;
+    width: 315px;
   }
 
   .container-section-box {
