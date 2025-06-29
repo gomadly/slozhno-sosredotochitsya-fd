@@ -243,8 +243,6 @@ footer {
   position: relative;
   display: flex;
   align-items: center;
-  height: 100vh;
-  min-height: 668px;
   padding-top: 20px;
   padding-left: 15px;
   color: var(--accent-color-title);
@@ -252,6 +250,8 @@ footer {
   font-size: 116px;
   line-height: 83%;
   text-shadow: 2px 2px 0 var(--accent-color);
+  height: 100vh;
+  min-height: 668px;
 }
 
 .footer-tittle::before {
@@ -416,10 +416,10 @@ footer {
   .footer-tittle {
     display: flex;
     justify-content: center;
-    height: 100vh;
-    min-height: 1024px;
     margin-right: 20px;
     font-size: 120px;
+    height: 100vh;
+    min-height: 1024px;
   }
 
   .footer-tittle::before {
@@ -520,6 +520,7 @@ footer {
 
   .footer-tittle {
     height: 100vh;
+    min-height: 768px;
     margin-top: 10px;
     font-size: 157px;
   }
