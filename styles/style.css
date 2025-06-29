@@ -136,22 +136,24 @@ header {
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+  border-bottom: 1px var(--accent-color-header) solid;
+  border-width: 1px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px var(--accent-color-header) solid;
+  border-width: 1px;
+}
+
 .title-decor:hover {
   border-bottom: 1px var(--accent-color-header) solid;
   border-width: 1px;
 }
 
 .title-decor:focus {
-  border: 1px var(--accent-color-header) solid;
-  border-width: 1px;
-}
-
-.header__theme-menu-button:focus {
-  border-bottom: 1px var(--accent-color-header) solid;
-  border-width: 1px;
-}
-
-.header__theme-menu-button:hover {
+  outline: none;
   border: 1px var(--accent-color-header) solid;
   border-width: 1px;
 }
