@@ -16,10 +16,6 @@ header {
   min-height: 668px;
 }
 
-.header__theme-menu-button {
-  color: var(--accent-color-header);
-}
-
 .header-tittle {
   padding-top: 10px;
   padding-left: 10px;
@@ -113,6 +109,7 @@ header {
   width: 70px;
   height: 26px;
   border: none;
+  color: var(--accent-color-header);
   background-color: transparent;
 }
 
@@ -246,7 +243,7 @@ footer {
   position: relative;
   display: flex;
   align-items: center;
-  height: 668px;
+  min-height: 668px;
   padding-top: 20px;
   padding-left: 15px;
   color: var(--accent-color-title);
@@ -418,7 +415,8 @@ footer {
   .footer-tittle {
     display: flex;
     justify-content: center;
-    height: 1024px;
+    height: 100vh;
+    min-height: 1024px;
     margin-right: 20px;
     font-size: 120px;
   }
@@ -520,7 +518,13 @@ footer {
   }
 
   .footer-tittle {
-    height: 768px;
+    height: 100vh;
+    margin-top: 10px;
     font-size: 157px;
+  }
+
+  .footer-tittle::before {
+    top: 40px;
+    right: 0;
   }
 }
