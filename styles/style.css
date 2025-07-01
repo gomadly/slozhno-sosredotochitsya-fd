@@ -244,28 +244,6 @@ header {
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.decorated-zone::before {
-  content: "";
-  position: absolute;
-  top: 9px;
-  right: 10px;
-  width: 25px;
-  height: 25px;
-  border-top: 1px solid var(--text-color-subtitle);
-  border-right: 1px solid var(--text-color-subtitle);
-}
-
-.decorated-zone::after {
-  content: "";
-  position: absolute;
-  bottom: 11px;
-  left: 10px;
-  width: 25px;
-  height: 25px;
-  border-bottom: 1px solid var(--text-color-subtitle);
-  border-left: 1px solid var(--text-color-subtitle);
-}
-
 @media (min-width: 768px) {
   .header {
     min-height: 1024px;
