@@ -2,8 +2,9 @@
 
 .page {
   min-width: 375px;
-  font-family: "IBM Plex mono";
+  font-family: "IBM Plex mono", monospace;
   font-size: 18px;
+  background-color: var(--background-color);
   background-image: var(--background-image);
   background-position: center;
   background-size: cover;
@@ -11,16 +12,18 @@
 }
 
 header {
-  display: grid;
-  grid-template-rows: 36px auto auto auto;
+  height: 100vh;
   min-height: 668px;
+  padding-top: 10px;
+  padding-bottom: 66px;
 }
 
 .rec-tittle {
   display: flex;
   justify-content: flex-end;
-  padding-top: 10px;
+  align-items: flex-end;
   padding-right: 38px;
+  padding-bottom: 39px;
   color: var(--accent-color-header-rec);
 }
 
@@ -41,9 +44,10 @@ header {
 .header__theme-menu {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
-  height: 137px;
+  align-items: center;
+  padding-bottom: 65px;
   color: var(--accent-color);
+  line-height: 18px;
 }
 
 .header__theme-menu-list {
@@ -63,6 +67,7 @@ header {
   border: none;
   color: var(--accent-color-header);
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
@@ -70,20 +75,22 @@ header {
 }
 
 .header-tittle {
-  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 55px;
   padding-left: 10px;
   color: var(--accent-color-title);
   font-weight: 700;
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header-text {
-  width: 355px;
-  height: 117px;
-  margin-bottom: 10px;
+  width: 100%;
+  max-width: 355px;
   margin-left: 10px;
+  margin-block-end: 10px;
   color: var(--text-color);
   font-weight: 700;
   font-size: 18px;
@@ -92,14 +99,12 @@ header {
 }
 
 .header__theme-menu-button:focus {
-  border-width: 1px;
   border-bottom: 1px var(--accent-color-header) solid;
   outline: none;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px var(--accent-color-header) solid;
-  border-width: 1px;
+  border: 1px var(--color-switch) solid;
 }
 
 .decorated-zone {
@@ -113,8 +118,8 @@ header {
   right: 10px;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--text-color-subtitle);
+  border-right: 1px solid var(--text-color-subtitle);
 }
 
 .decorated-zone::after {
@@ -124,12 +129,8 @@ header {
   left: 10px;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
-}
-
-.container {
-  background-color: var(--background-color);
+  border-bottom: 1px solid var(--text-color-subtitle);
+  border-left: 1px solid var(--text-color-subtitle);
 }
 
 .container-section {
@@ -139,6 +140,15 @@ header {
 
 .container-section-about-focused {
   padding-top: 40px;
+}
+
+.container-section-about-сoncentration {
+  padding-top: 30px;
+}
+
+.container-section-about-сoncentration-better {
+  padding-top: 30px;
+  padding-bottom: 28px;
 }
 
 .average-tittle {
@@ -166,23 +176,22 @@ header {
   line-height: 23.4px;
 }
 
-.container-section-text-padding {
-  padding-bottom: 50px;
-}
-
 .title-decor {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .title-decor:hover {
-  border-width: 1px;
   border-bottom: 1px var(--accent-color-header) solid;
 }
 
 .title-decor:focus {
+  border: none;
+  outline: none;
+}
+
+.title-decor:focus-visible {
   border: 1px var(--accent-color-header) solid;
-  border-width: 1px;
   outline: none;
 }
 
@@ -209,77 +218,59 @@ header {
   background-color: var(--accent-color);
 }
 
-.img-sunset {
-  width: 100%;
-  height: 100%;
-}
-
-.img-ice {
-  width: 100%;
-  height: 100%;
-}
-
-.img-tape {
-  width: 100%;
-  height: 100%;
-}
-
-.img-books {
+.img {
   width: 100%;
   height: 100%;
 }
 
 .img-street {
-  width: 100%;
-  height: 100%;
   padding-bottom: 40px;
 }
 
-footer {
+.footer {
   position: relative;
-  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   min-height: 668px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer-tittle {
   color: var(--accent-color-title);
   font-weight: 700;
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-footer::before {
+.decorated-zone::before {
   content: "";
   position: absolute;
   top: 9px;
   right: 10px;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--text-color-subtitle);
+  border-right: 1px solid var(--text-color-subtitle);
 }
 
-footer::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   bottom: 11px;
   left: 10px;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--text-color-subtitle);
+  border-left: 1px solid var(--text-color-subtitle);
 }
 
 @media (min-width: 768px) {
   .header {
-    display: grid;
-    grid-template-rows: auto 244px 434px 300px;
-    height: 1024px;
+    min-height: 1024px;
+    padding-top: 20px;
+    padding-bottom: 183px;
   }
 
   .header-box {
@@ -292,15 +283,17 @@ footer::after {
     display: flex;
     align-items: center;
     margin-left: -10px;
-    font-size: 120px;
+    padding-bottom: 162px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header-text {
-    width: 364px;
+    width: 100%;
+    max-width: 364px;
   }
 
   .header__theme-menu {
-    height: 244px;
+    padding-bottom: 173px;
   }
 
   .header__theme-menu-list {
@@ -308,8 +301,8 @@ footer::after {
   }
 
   .rec-tittle {
-    padding-top: 22px;
     padding-right: 49px;
+    padding-bottom: 147px;
   }
 
   .rec-tittle::after {
@@ -330,7 +323,7 @@ footer::after {
   .container-section-about-focused {
     display: grid;
     grid-template-columns: 256px auto;
-    grid-template-rows: 334px 334px;
+    grid-template-rows: auto auto;
     padding-top: 60px;
   }
 
@@ -351,8 +344,16 @@ footer::after {
   }
 
   .average-tittle-width {
-    width: 236px;
-    padding-top: 60px;
+    width: 100%;
+    max-width: 236px;
+  }
+
+  .container-section-about-focused {
+    padding-bottom: 30px;
+  }
+
+  .container-section-about-сoncentration {
+    padding-bottom: 30px;
   }
 
   .container-section-about-сoncentration-better {
@@ -410,13 +411,13 @@ footer::after {
     object-fit: cover;
   }
 
-  footer {
+  .footer {
     height: 100vh;
     min-height: 1024px;
   }
 
   .footer-tittle {
-    font-size: 120px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   footer::before {
@@ -434,8 +435,10 @@ footer::after {
   .header {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 46px 403px auto;
-    height: 768px;
+    grid-template-rows: auto auto auto;
+    height: 100vh;
+    min-height: 768px;
+    padding-bottom: 0;
   }
 
   .header__theme-menu {
@@ -444,7 +447,6 @@ footer::after {
     grid-row: 1;
     justify-content: center;
     align-items: start;
-    margin-top: 20px;
     padding-left: 20px;
   }
 
@@ -458,33 +460,34 @@ footer::after {
     display: flex;
     grid-column: 1/3;
     grid-row: 2;
-    align-items: flex-end;
-    font-size: 157px;
+    align-items: flex-start;
+    padding-bottom: 10px;
   }
 
   .header-box {
     display: flex;
     grid-column: 1/4;
     grid-row: 3;
-    align-items: center;
-    margin-bottom: 10px;
+    align-items: flex-start;
+    margin-bottom: 20px;
   }
 
   .header-text {
-    width: 491px;
-    height: 71px;
+    width: 100%;
+    max-width: 491px;
   }
 
   .rec-tittle {
+    display: flex;
     grid-column: 3;
     grid-row: 1;
+    align-items: flex-start;
   }
 
   .container-section-about-focused {
     display: grid;
     grid-template-columns: 335px auto;
-    grid-template-rows: 264px 264px;
-    height: 588px;
+    grid-template-rows: auto auto;
   }
 
   .container-section-about-сoncentration {
@@ -496,7 +499,8 @@ footer::after {
   .average-tittle-width {
     grid-column: 1/4;
     grid-row: 1;
-    width: 315px;
+    width: 100%;
+    max-width: 315px;
   }
 
   .container-section-box {
@@ -515,12 +519,8 @@ footer::after {
     margin-right: 0;
   }
 
-  footer {
+  .footer {
     height: 100vh;
     min-height: 768px;
-  }
-
-  .footer-tittle {
-    font-size: 157px;
   }
 }
