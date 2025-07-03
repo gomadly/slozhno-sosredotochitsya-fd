@@ -203,7 +203,7 @@ header {
   margin-bottom: 20px;
 }
 
-.container-section-img {
+.container-section-box-img {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -376,7 +376,7 @@ header {
     margin-bottom: 20px;
   }
 
-  .container-section-img {
+  .container-section-box-img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
