@@ -11,7 +11,7 @@
   background-attachment: fixed;
 }
 
-header {
+.header {
   height: 100vh;
   min-height: 668px;
   padding-top: 10px;
@@ -258,8 +258,6 @@ header {
   }
 
   .header-tittle {
-    display: flex;
-    align-items: center;
     margin-left: -10px;
     padding-bottom: 162px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -331,7 +329,6 @@ header {
     display: grid;
     grid-template-columns: 256px auto;
     grid-template-rows: auto auto auto auto auto;
-    padding-top: 30px;
   }
 
   .average-tittle-grid {
@@ -410,13 +407,11 @@ header {
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
     column-gap: 10px;
   }
 
   .header-tittle {
-    display: flex;
     grid-column: 1/3;
     grid-row: 2;
     align-items: flex-start;
@@ -442,13 +437,10 @@ header {
   }
 
   .container-section-about-focused {
-    display: grid;
     grid-template-columns: 335px auto;
-    grid-template-rows: auto auto;
   }
 
   .container-section-about-сoncentration {
-    display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
   }
@@ -459,25 +451,14 @@ header {
     max-width: 315px;
   }
 
-  .container-section-about-сoncentration > .container-section-box:nth-child(2) {
-    min-width: 315px;
-    margin-right: 20px;
-  }
-
-  .container-section-about-сoncentration > .container-section-box:nth-child(3) {
-    min-width: 315px;
-    margin-right: 20px;
-  }
-
-  .container-section-about-сoncentration > .container-section-box:nth-child(4) {
-    min-width: 315px;
-    margin-right: 20px;
+  .content-box-about-сoncentration {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
   }
 
   .container-section-about-сoncentration-better {
-    display: grid;
     grid-template-columns: 335px auto;
-    grid-template-rows: auto auto auto auto auto;
   }
 
   .little-tittle-img {
